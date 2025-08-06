@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #005a9e;
+    --secondary-color: #00b4e1;
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --section-bg-color: #f4f8fa;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #333;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--primary-color);
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+section {
+    background-color: var(--section-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.text-content ul, .text-content ol {
+    padding-left: 20px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+#specs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+#specs th, #specs td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+#specs th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#specs td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+#specs tr:nth-child(even) {
+    background-color: #e9f5f9;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#publication p {
+    font-style: italic;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
