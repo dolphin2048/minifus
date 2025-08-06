@@ -201,6 +201,28 @@ footer {
     background-color: var(--secondary-color);
 }
 
+.qr-codes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.qr-code p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .content-grid {
         grid-template-columns: 1fr;
